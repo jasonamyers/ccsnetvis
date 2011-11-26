@@ -1,0 +1,25 @@
+<h1>Listing IP Addresses</h1>
+
+<table>
+<% @ip_addresses.each do |ip_address| %>
+  <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+    <td class="list_name">
+      <dl>
+        <dt><%= ip_address.address %></dt>
+        <dd><%= ip_address.name %></dd>
+      </dl>
+    </td>  
+    <td class="list_purpose"><%= ip_address.purpose %></td>
+    <td><%= ip_address.url %></td>
+    <td class="list_actions">
+      <%= link_to 'Show', ip_address %>
+      <%= link_to 'Edit', edit_ip_address_path(ip_address) %>
+      <%= link_to 'Destroy', ip_address, confirm: 'Are you sure?', method: :delete %>
+    </td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ip address', new_ip_address_path %>
