@@ -11,8 +11,8 @@
 
 <% @site_contacts.each do |site_contact| %>
   <tr>
-    <td><%= site_contact.contact_id %></td>
-    <td><%= site_contact.site_id %></td>
+    <td><%= site_contact.contact.name %></td>
+    <td><%= site_contact.site.name %></td>
     <td><%= link_to 'Show', site_contact %></td>
     <td><%= link_to 'Edit', edit_site_contact_path(site_contact) %></td>
     <td><%= link_to 'Destroy', site_contact, confirm: 'Are you sure?', method: :delete %></td>

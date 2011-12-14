@@ -15,6 +15,14 @@
   <%= @site.description %>
 </p>
 
+<p>
+	<b>Contacts:</b>
+	<% @site.site_contacts.each do |contact| %>
+	   
+	  <% @contacts = Contact.find(contact.contact_id) %>
+	  <%= @contacts.name %><br>
+	<% end %>
+
 
 <%= link_to 'Edit', edit_site_path(@site) %> |
 <%= link_to 'Back', sites_path %>
