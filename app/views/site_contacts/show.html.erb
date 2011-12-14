@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Contact:</b>
+  <%= @site_contact.contact_id %>
+</p>
+
+<p>
+  <b>Site:</b>
+  <%= @site_contact.site_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_site_contact_path(@site_contact) %> |
+<%= link_to 'Back', site_contacts_path %>
