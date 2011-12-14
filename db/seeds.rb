@@ -15,3 +15,9 @@ Site.delete_all
 Site.create(name: 'PDC',address: '940 3rd Avenue North, Nashville, TN 37201', description: 'Windstream - Primary Data Center')
 Site.create(name: 'SDC',address: '425 Duke Drive, Suite 400, Franklin, TN 37067', description: 'Peak 10 - Secondary Data Center')
 # . . .
+Contact.delete_all
+# . . .
+Contact.create(name: 'Peak 10 Support', phone: '1-866-732-5836', email: 'support@peak10.com')
+Contact.create(name: 'Windstream Support', phone: '1-800-600-5050', email: '')
+Contact.create(name: 'Jim Jones', phone: '615-642-8451', email: 'james.jones.jr@windstream.com')
+# . . .
