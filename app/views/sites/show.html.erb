@@ -20,7 +20,7 @@
 	<% @site.site_contacts.each do |contact| %>
 	   
 	  <% @contacts = Contact.find(contact.contact_id) %>
-	  <%= @contacts.name %><br>
+	  <%= link_to @contacts.name, @contacts %><br>
 	<% end %>
 
 

@@ -1,4 +1,6 @@
 Ccsnetvis::Application.routes.draw do
+  resources :subnets
+
   resources :site_contacts
 
   resources :contacts

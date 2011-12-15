@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  network: MyString
+  description: MyText
+  netmask: MyString
+  gateway: MyString
+
+two:
+  network: MyString
+  description: MyText
+  netmask: MyString
+  gateway: MyString

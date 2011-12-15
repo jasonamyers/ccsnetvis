@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Network:</b>
+  <%= @subnet.network %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @subnet.description %>
+</p>
+
+<p>
+  <b>Netmask:</b>
+  <%= @subnet.netmask %>
+</p>
+
+<p>
+  <b>Gateway:</b>
+  <%= @subnet.gateway %>
+</p>
+
+
+<%= link_to 'Edit', edit_subnet_path(@subnet) %> |
+<%= link_to 'Back', subnets_path %>

@@ -21,9 +21,9 @@ Contact.create(name: 'Peak 10 Support', phone: '1-866-732-5836', email: 'support
 Contact.create(name: 'Windstream Support', phone: '1-800-600-5050', email: '')
 Contact.create(name: 'Jim Jones', phone: '615-642-8451', email: 'james.jones.jr@windstream.com')
 # . . .
-Site_Contact.delete_all
+# Site_Contact.delete_all
 # . . .
-Site_Contact.create(contact_id: '1', site_id: '5')
-Site_Contact.create(contact_id: '2', site_id: '4')
-Site_Contact.create(contact_id: '3', site_id: '4')
+# Site_Contact.create(contact_id: 1, site_id: 5)
+# Site_Contact.create(contact_id: 2, site_id: 4)
+# Site_Contact.create(contact_id: 3, site_id: 4)
 # . . .
