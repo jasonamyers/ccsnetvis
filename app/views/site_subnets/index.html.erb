@@ -1,7 +1,7 @@
 <table>
 	<tr>
 		<td>
-			<table style="vertical-align:top;padding:5000">
+			<table>
 				<tr>
 					<th><% @site1 = SiteSubnet.find(2) %><%= @site1.site.name%></th>
 				</tr>
@@ -12,7 +12,7 @@
 				<% end %>
 			</table>
 		</td>
-		<td style="vertical-align:top;padding:30">
+		<td>
 			<table>
 				<tr>
 					<th><% @site2 = SiteSubnet.find(4) %><%= @site2.site.name%></th>
