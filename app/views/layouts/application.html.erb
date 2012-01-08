@@ -7,7 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body class='<%= controller.controller_name %>'>
+	<h1>CCSNETVIS</h1>
+<%= link_to "Subnets", subnets_path %> | <%= link_to "ip_address", ip_addresses_path %> | <%= link_to "Site", sites_path %> | <%= link_to "Contacts", contacts_path  %> | <%= link_to "site_contacts", site_contacts_path%> | <%= link_to "site_subnets", site_subnets_path %>
 
+<hr>
 <%= yield %>
 
 </body>

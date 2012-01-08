@@ -1,0 +1,23 @@
+<%= form_for(@site_subnet) do |f| %>
+  <% if @site_subnet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@site_subnet.errors.count, "error") %> prohibited this site_subnet from being saved:</h2>
+
+      <ul>
+      <% @site_subnet.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= collection_select(:site_subnet, :site_id, Site.all, :id, :name) %>
+  </div>
+  <div class="field">
+    <%= collection_select(:site_subnet, :subnet_id, Subnet.all, :id, :network) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

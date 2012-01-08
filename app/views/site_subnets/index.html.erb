@@ -1,0 +1,53 @@
+<table>
+	<tr>
+		<td>
+			<table style="vertical-align:top;padding:5000">
+				<tr>
+					<th><% @site1 = SiteSubnet.find(2) %><%= @site1.site.name%></th>
+				</tr>
+				<% @primary_site_subnets.each do |main_subnet| %>
+				<tr>
+					<td><%= link_to main_subnet.subnet.network,edit_subnet_path(main_subnet.subnet) %></td>
+				</tr>
+				<% end %>
+			</table>
+		</td>
+		<td style="vertical-align:top;padding:30">
+			<table>
+				<tr>
+					<th><% @site2 = SiteSubnet.find(4) %><%= @site2.site.name%></th>
+				</tr>
+				<% @secondary_site_subnets.each do |secondary_subnet| %>
+				<tr>
+					<td><%= link_to secondary_subnet.subnet.network,edit_subnet_path(secondary_subnet.subnet) %></td>
+				</tr>
+				<% end %>
+			</table>
+		</td>
+	</tr>
+</table>
+
+<hr>
+<table>
+  <tr>
+    <th>Remote Site</th>
+    <th>Subnet</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @site_subnets.each do |site_subnet| %>
+  <tr>
+    <td><%= site_subnet.site.name %></td>
+    <td><%= site_subnet.subnet.network %></td>
+    <td><%= link_to image_tag('views-icon.png'), site_subnet %></td>
+    <td><%= link_to image_tag('edit-icon.png'), edit_site_subnet_path(site_subnet) %></td>
+    <td><%= link_to image_tag('delete-icon.png'), site_subnet, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Site subnet', new_site_subnet_path %>
