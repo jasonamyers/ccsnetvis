@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Subnet:</b>
+  <%= @subnet_ipaddress.subnet_id %>
+</p>
+
+<p>
+  <b>Ipaddress:</b>
+  <%= @subnet_ipaddress.ipaddress_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_subnet_ipaddress_path(@subnet_ipaddress) %> |
+<%= link_to 'Back', subnet_ipaddresses_path %>

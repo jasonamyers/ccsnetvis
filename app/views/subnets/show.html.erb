@@ -1,25 +1,49 @@
 <p id="notice"><%= notice %></p>
+<% @ip_parts=@subnet.network.split('.')%>
+<% $ip_start="#{@ip_parts[0]}.#{@ip_parts[1]}.#{@ip_parts[2]}"%>
+<table>
+	<tr>
+		<td valign=top>
+			<table>
+				<tr>
+					<th>Address</th>
+					<th>Host</th>
+				</tr>
+				<% for i in (0..255) %>
+					<% $ip_address = "#{$ip_start}.#{i}"%>
+					<% @current_ip_address = IpAddress.where(:address => $ip_address).all%>
+					<% @current_ip_address.each do |ip| %>
+					<tr>
+						<td><%= link_to $ip_address, ip_address_path(ip) %></td>
+						<td><%= link_to ip.name, edit_ip_address_path(ip) %></td>
+					</tr>
+					<% end %>
+				<% end %>
+			</table>
+		</td>
+		<td valign=top>
+			<table>
+				<tr>
+					<td><b>Network:</b></td><td><%= @subnet.network %></td>
+				</tr>
+				<tr>
+					<td><b>Description:</b></td><td><%= @subnet.description %></td>
+				</tr>
+				<tr>
+					<td><b>Netmask:</b></td><td><%= @subnet.netmask %></td>
+				</tr>
+				<tr>
+					<td><b>Gateway:</b></td><td><%= @subnet.gateway %></td>
+				</tr>
+				<tr>
+					<td>
+						<%= link_to 'Edit', edit_subnet_path(@subnet) %> |
+						<%= link_to 'Back', subnets_path %>
+					</td>
+				</tr>
+			</table>
+			
+		</td>
+	</tr>
+</table>
 
-<p>
-  <b>Network:</b>
-  <%= @subnet.network %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @subnet.description %>
-</p>
-
-<p>
-  <b>Netmask:</b>
-  <%= @subnet.netmask %>
-</p>
-
-<p>
-  <b>Gateway:</b>
-  <%= @subnet.gateway %>
-</p>
-
-
-<%= link_to 'Edit', edit_subnet_path(@subnet) %> |
-<%= link_to 'Back', subnets_path %>

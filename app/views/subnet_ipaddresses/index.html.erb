@@ -1,0 +1,25 @@
+<h1>Listing subnet_ipaddresses</h1>
+
+<table>
+  <tr>
+    <th>Subnet</th>
+    <th>Ipaddress</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @subnet_ipaddresses.each do |subnet_ipaddress| %>
+  <tr>
+    <td><%= subnet_ipaddress.subnet_id %></td>
+    <td><%= subnet_ipaddress.ipaddress_id %></td>
+    <td><%= link_to 'Show', subnet_ipaddress %></td>
+    <td><%= link_to 'Edit', edit_subnet_ipaddress_path(subnet_ipaddress) %></td>
+    <td><%= link_to 'Destroy', subnet_ipaddress, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Subnet ipaddress', new_subnet_ipaddress_path %>

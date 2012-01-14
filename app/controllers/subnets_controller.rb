@@ -14,7 +14,7 @@ class SubnetsController < ApplicationController
   # GET /subnets/1.json
   def show
     @subnet = Subnet.find(params[:id])
-
+    @ip_addresses = IpAddress.all
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @subnet }

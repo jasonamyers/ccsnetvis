@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  subnet_id: 1
+  ipaddress_id: 1
+
+two:
+  subnet_id: 1
+  ipaddress_id: 1

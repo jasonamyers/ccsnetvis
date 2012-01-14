@@ -7,7 +7,7 @@
 				</tr>
 				<% @primary_site_subnets.each do |main_subnet| %>
 				<tr>
-					<td><%= link_to main_subnet.subnet.network,edit_subnet_path(main_subnet.subnet) %></td>
+					<td><%= link_to main_subnet.subnet.network,subnet_path(main_subnet.subnet) %></td>
 				</tr>
 				<% end %>
 			</table>
@@ -19,7 +19,7 @@
 				</tr>
 				<% @secondary_site_subnets.each do |secondary_subnet| %>
 				<tr>
-					<td><%= link_to secondary_subnet.subnet.network,edit_subnet_path(secondary_subnet.subnet) %></td>
+					<td><%= link_to secondary_subnet.subnet.network,subnet_path(secondary_subnet.subnet) %></td>
 				</tr>
 				<% end %>
 			</table>
