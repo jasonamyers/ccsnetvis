@@ -1,0 +1,12 @@
+insert into "ip_addresses" (address,name) values ('8.12.27.7','HCS2 Twice NAT IP (external) to 192.168.16.7 (internal)');
+insert into "ip_addresses" (address,name) values ('8.12.27.38','Reserved for ERMA Teiring');
+insert into "ip_addresses" (address,name) values ('8.12.27.48','Reserved for ERMA Teiring');
+insert into "ip_addresses" (address,name) values ('8.12.27.58','Reserved for ERMA Teiring');
+insert into "ip_addresses" (address,name) values ('8.12.27.68','Reserved for ERMA Teiring');
+insert into "ip_addresses" (address,name) values ('8.12.27.78','Reserved for ERMA Teiring');
+insert into "ip_addresses" (address,name) values ('8.12.27.80','Webmail');
+insert into "ip_addresses" (address,name) values ('8.12.27.81','SMTP');
+insert into "ip_addresses" (address,name) values ('8.12.27.82','LDAP');
+insert into "ip_addresses" (address,name) values ('8.12.27.85','DCM');
+insert into "ip_addresses" (address,name) values ('8.12.27.86','Sharepoint');
+insert into "ip_addresses" (address,name) values ('8.12.27.87','Sharepoint My Sites');

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120108170334) do
+ActiveRecord::Schema.define(:version => 20120114042308) do
 
   create_table "contacts", :force => true do |t|
     t.string   "name"
@@ -48,6 +48,20 @@ ActiveRecord::Schema.define(:version => 20120108170334) do
     t.string   "name"
     t.string   "address"
     t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "subnet_ip_addressesses", :force => true do |t|
+    t.integer  "subnet_id"
+    t.integer  "ipaddress_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "subnet_ipaddresses", :force => true do |t|
+    t.integer  "subnet_id"
+    t.integer  "ipaddress_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
