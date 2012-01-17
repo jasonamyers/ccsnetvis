@@ -1,26 +1,85 @@
-<h1>Listing sites</h1><%= link_to 'New Site', new_site_path %>
+<div id="Wrapper" style="position: relative;">
+	<div id="swap_to"></div>
+	<div id="swap_from">
+		<div id="screen_body" class="container">
+			<div id="blank_slate" class="clearfix"></div>
+			<table class="layout">
+				<tr>
+					<td class="left">
+						<div class="Left">
+							<div class="col">
+								<div class="page_header">
+									<h1>
+										Site Listing
+									</h1>
+									</div>
+									<div class="innercol">
 
 <table>
-  <tr>
-    <th>Name</th>
-    <th>Address</th>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
 <% @sites.each do |site| %>
-  <tr>
-    <td><%= site.name %></td>
-    <td><%= site.address %></td>
-    <td><%= site.description %></td>
-    <td><%= link_to 'Show', site %></td>
-    <td><%= link_to 'Edit', edit_site_path(site) %></td>
-    <td><%= link_to 'Destroy', site, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
+  <table class="forum_view">
+    
+<tr id="<%= site.id %>">
+  <td class="message">
+    <div style="margin-left: 40px;">
+        <span class="title"><%= link_to site.name,edit_site_path(site) %> - <%=site.description%></span>
+      
+      
+      <br />
+      <span class="meta">
+        <%= site.address %>
+      </span>
+    </div>
+  </td>
+  <td class="last_comment"><%= link_to "Delete", site, confirm: 'Are you sure?', method: :delete %>
+  </td>
+</tr>
+
+
+<% end %> 
 </table>
 
 <br />
+<br>
+</div>
+</div>
+<div class="bottom">
+&nbsp;
+</div>
+<div class="footer"></div>
+</div>
+</td>
+<td class="right">
+<div class="Right">
+<div class="col">
 
+
+<h1>Create New :</h1>
+<div class="indent people_on_project">
+<%= link_to Subnet, new_subnet_path%>
+</div>
+
+<div class="project_notifications">
+<h1>Report Bug or Get Help</h1>
+<div class="indent">
+<div class="digest_subscription">
+
+<span class="sprite email_icon" style="background: url(<%= asset_path 'basecamp_sprites.png' %>) no-repeat -190px -30px; width: 21px; padding-top: 21px; " title=""></span>
+<p><a href="mailto:jamyers@correctcaresolutions.com">Email Jason</a></p>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+<%= link_to 'New Site', new_site_path %>

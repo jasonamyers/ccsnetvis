@@ -12,10 +12,10 @@
   <% end %>
 
   <div class="field">
-    <%= collection_select(:site_subnet, :site_id, Site.all, :id, :name) %>
+    <%= collection_select(:site_subnet, :site_id, Site.all(:order => 'name'), :id, :name) %>
   </div>
   <div class="field">
-    <%= collection_select(:site_subnet, :subnet_id, Subnet.all, :id, :network) %>
+    <%= collection_select(:site_subnet, :subnet_id, Subnet.all(:order => 'network'), :id, :network) %>
   </div>
   <div class="actions">
     <%= f.submit %>

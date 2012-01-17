@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120114042308) do
+ActiveRecord::Schema.define(:version => 20120117002743) do
 
   create_table "contacts", :force => true do |t|
     t.string   "name"
@@ -73,6 +73,7 @@ ActiveRecord::Schema.define(:version => 20120114042308) do
     t.string   "gateway"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "preference"
   end
 
 end

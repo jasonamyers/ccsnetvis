@@ -2,9 +2,9 @@ class SiteSubnetsController < ApplicationController
   # GET /site_subnets
   # GET /site_subnets.json
   def index
-    @primary_site_subnets = SiteSubnet.where(:site_id => 1).all
-    @secondary_site_subnets = SiteSubnet.where(:site_id => 2).all
-    @site_subnets = SiteSubnet.where("site_id > ?", 2).all
+    @primary_site_subnets = SiteSubnet.where(:site_id => 1).all(:include => :subnet, :order => 'subnets.preference')
+    @secondary_site_subnets = SiteSubnet.where(:site_id => 2).all(:include => :subnet, :order => 'subnets.preference')
+    @site_subnets = SiteSubnet.where("site_id > ?", 2).all(:include => :site, :order => 'sites.name')
 
     respond_to do |format|
       format.html # index.html.erb

@@ -5,13 +5,145 @@
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <style type="text/css" media="screen">
+
+  a:link, a:visited {
+    color: #03c;
+  }
+
+  a:hover {
+    color: #fff;
+    background-color: #03c;
+  }
+
+  #Header {
+    background-color: #195D00;
+  }
+
+  #Header h1 {
+    color: #fff;
+  }
+
+  #Header h1 a:link, #Header h1 a:visited {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  #Header h1 a:hover {
+    color: #fff;
+    background-color: #195D00;
+    text-decoration: underline;
+  }
+
+  #Header h1 span {
+    color: #D1EEFF;
+  }
+
+  #Header div.navigation,
+  #Header div.navigation a:link,
+  #Header div.navigation a:visited {
+    color: #D1EEFF;
+  }
+
+  #Header div.navigation a:link,
+  #Header div.navigation a:visited {
+    background-color: #195D00;
+  }
+
+  #Header div.navigation a:hover {
+    color: #fff;
+    background-color: #054700;
+  }
+
+  #Header div.navigation a.current:link,
+  #Header div.navigation a.current:visited {
+    color: #fff;
+  }
+
+  #Header div.navigation a.current:hover {
+    color: #fff;
+    background-color: #195D00;
+  }
+
+  #P2P_selector {
+    border: 1px solid #D1EEFF;
+    color: #fff;
+  }
+
+  #Tabs a:link, #Tabs a:visited {
+    background-color: #217A00;
+    color: #D1EEFF;
+
+  }
+
+  #Tabs ul#MainTabs a:link.current, #Tabs ul#MainTabs a:visited.current,
+  .Right #categories a.current:link, .Right #categories a.current:visited {
+    color: #000;
+  }
+
+  #Tabs a:hover {
+    color: #fff;
+    background-color: #054700;
+  }
+
+  #Tabs li#AdminTab a:link, #Tabs li#AdminTab a:visited {
+    color: #D1EEFF;
+    background-color: #195D00;
+    border-bottom: 1px solid #195D00;
+    text-decoration: underline;
+  }
+
+  #Tabs li#AdminTab a:hover {
+    color: #fff;
+  }
+
+  #Tabs li#AdminTab a.current {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  #project_switcher div.menu a:hover,
+  #project_switcher div.menu a:hover span {
+    background: #ecefeb !important;
+  }
+
+  #project_switcher div.menu a:active,
+  #project_switcher div.menu a:active span {
+    background: #ffa !important;
+  }
+
+  table.forum_view td.message a:hover {
+    color: #03c;
+  }
+
+  table.forum_view td.message a span.title:hover {
+    color: #fff;
+    background: #03c;
+  }
+
+</style>
 </head>
 <body class='<%= controller.controller_name %>'>
+	<div id="Header" class="global">
 	<h1>CCSNETVIS</h1>
-	<h2>Tracking <%= IpAddress.count %> IPs, <%=Subnet.count%> Subnets, and <%=Site.count%> Sites.</h2>
-<%= link_to "Subnets", subnets_path %> | <%= link_to "ip_address", ip_addresses_path %> | <%= link_to "Site", sites_path %> | <%= link_to "Contacts", contacts_path  %> | <%= link_to "site_contacts", site_contacts_path%> | <%= link_to "site_subnets", site_subnets_path %>
+	<div class="navigation">
+    <div id="settings_signout_and_help">
+      <span class="name">Tracking <%= IpAddress.count %> IPs, <%=Subnet.count%> Subnets, and <%=Site.count%> Sites.</span>
+    </div>
+  </div>
+  <div id="Tabs"> 
+	<ul id="MainTabs">
+		<!-- <li><%= link_to "Subnets", subnets_path %></li> 
+		<li><%= link_to "IP Addresses", ip_addresses_path %></li> -->
+		<li><%= link_to "Sites", sites_path %></li>
+		<li><%= link_to "Contacts", contacts_path  %></li>
+		<!-- <li><%= link_to "Site Contacts", site_contacts_path%></li> -->
+		<li style="float: right"><%= link_to "Home", site_subnets_path %></li>
+	</ul>
+	</div>
+	</div>
 
-<hr>
+
 <%= yield %>
 
 </body>

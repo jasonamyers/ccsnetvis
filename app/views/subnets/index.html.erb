@@ -6,6 +6,7 @@
     <th>Description</th>
     <th>Netmask</th>
     <th>Gateway</th>
+	<th>Preference</th>
     <th></th>
     <th></th>
     <th></th>
@@ -17,6 +18,7 @@
     <td><%= subnet.description %></td>
     <td><%= subnet.netmask %></td>
     <td><%= subnet.gateway %></td>
+	<td><%= subnet.preference %></td>
     <td><%= link_to 'Show', subnet %></td>
     <td><%= link_to 'Edit', edit_subnet_path(subnet) %></td>
     <td><%= link_to 'Destroy', subnet, confirm: 'Are you sure?', method: :delete %></td>

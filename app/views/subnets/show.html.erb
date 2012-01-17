@@ -8,6 +8,7 @@
 				<tr>
 					<th>Address</th>
 					<th>Host</th>
+					<th>Purpose</th>
 				</tr>
 				<% for i in (0..255) %>
 					<% $ip_address = "#{$ip_start}.#{i}"%>
@@ -16,6 +17,7 @@
 					<tr>
 						<td><%= link_to $ip_address, ip_address_path(ip) %></td>
 						<td><%= link_to ip.name, edit_ip_address_path(ip) %></td>
+						<td><%= ip.purpose%></td>
 					</tr>
 					<% end %>
 				<% end %>

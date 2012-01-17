@@ -1,47 +1,106 @@
-<table>
-	<tr>
-		<td valign=top>
-			<table>
-				<tr>
-					<th><% @site1 = SiteSubnet.find(2) %><%= @site1.site.name%></th>
-				</tr>
-				<% @primary_site_subnets.each do |main_subnet| %>
-				<tr>
-					<td><%= link_to main_subnet.subnet.network,subnet_path(main_subnet.subnet) %></td>
-				</tr>
-				<% end %>
-			</table>
-		</td>
-		<td valign=top>
-			<table>
-				<tr>
-					<th><% @site2 = SiteSubnet.find(4) %><%= @site2.site.name%></th>
-				</tr>
-				<% @secondary_site_subnets.each do |secondary_subnet| %>
-				<tr>
-					<td><%= link_to secondary_subnet.subnet.network,subnet_path(secondary_subnet.subnet) %></td>
-				</tr>
-				<% end %>
-			</table>
-		</td>
-	</tr>
-</table>
+		<div id="Wrapper" style="position: relative;">
+			<div id="swap_to"></div>
+			<div id="swap_from">
+				<div id="screen_body" class="container">
+					<div id="blank_slate" class="clearfix"></div>
+					<table class="layout">
+						<tr>
+							<td class="left">
+								<div class="Left">
+									<div class="col">
+										<div class="page_header">
+											<h1>
+												Sites and Subnets Overview
+											</h1>
+										</div>
+										<div class="innercol">
+											<table>
+												<tr>
+													<td valign="top">
+														<table>
+															<tr>
+																<th>
+																	<% @site1 = SiteSubnet.find(2) %><%= @site1.site.name%>
+																</th>
+															</tr><% @primary_site_subnets.each do |main_subnet| %>
+															<tr>
+																<td>
+																	<%= link_to main_subnet.subnet.network,subnet_path(main_subnet.subnet) %>
+																</td>
+															</tr><% end %>
+														</table>
+													</td>
+													<td valign="top">
+														<table>
+															<tr>
+																<th>
+																	<% @site2 = SiteSubnet.find(4) %><%= @site2.site.name%>
+																</th>
+															</tr><% @secondary_site_subnets.each do |secondary_subnet| %>
+															<tr>
+																<td>
+																	<%= link_to secondary_subnet.subnet.network,subnet_path(secondary_subnet.subnet) %>
+																</td>
+															</tr><% end %>
+														</table>
+													</td>
+												</tr>
+											</table>
+											<hr>
+											<table>
+												<tr>
+													<th>
+														Remote Site
+													</th>
+													<th>
+														Subnet
+													</th>
+												</tr><% @site_subnets.each do |site_subnet| %>
+												<tr>
+													<td>
+														<%= site_subnet.site.name %>
+													</td>
+													<td>
+														<%= link_to site_subnet.subnet.network, subnet_path(site_subnet.subnet) %>
+													</td>
+												</tr><% end %>
+											</table><br>
+										</div>
+									</div>
+									<div class="bottom">
+										&nbsp;
+									</div>
+									<div class="footer"></div>
+								</div>
+							</td>
+							<td class="right">
+								<div class="Right">
+									<div class="col">
 
-<hr>
-<table>
-  <tr>
-    <th>Remote Site</th>
-    <th>Subnet</th>
-  </tr>
 
-<% @site_subnets.each do |site_subnet| %>
-  <tr>
-    <td><%= site_subnet.site.name %></td>
-    <td><%= link_to site_subnet.subnet.network, subnet_path(site_subnet.subnet) %></td>
-  </tr>
-<% end %>
-</table>
+										  <h1>Create New :</h1>
+										  <div class="indent people_on_project">
+										  <%= link_to Subnet, new_subnet_path%>
+										  </div>
 
-<br />
+				    <div class="project_notifications">
+				      <h1>Report Bug or Get Help</h1>
+				      <div class="indent">
+				          <div class="digest_subscription">
 
-<%= link_to 'New Site subnet', new_site_subnet_path %>
+				            <span class="sprite email_icon" style="background: url(<%= asset_path 'basecamp_sprites.png' %>) no-repeat -190px -30px; width: 21px; padding-top: 21px; " title=""></span>
+				              <p><a href="mailto:jamyers@correctcaresolutions.com">Email Jason</a></p>
+				          </div>
+				      </div>
+				    </div>
+
+
+
+				                 </div>
+				               </div>
+				             </td>
+				           </tr>
+				        </table>
+				    </div>
+				  </div>
+				</div>
