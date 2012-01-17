@@ -32,7 +32,7 @@
       </span>
     </div>
   </td>
-  <td class="last_comment"><%= link_to "Delete", site, confirm: 'Are you sure?', method: :delete %>
+  <td class="last_comment">
   </td>
 </tr>
 
@@ -44,42 +44,43 @@
 <br>
 </div>
 </div>
-<div class="bottom">
-&nbsp;
-</div>
-<div class="footer"></div>
-</div>
-</td>
-<td class="right">
-<div class="Right">
-<div class="col">
+					<div class="bottom">
+						&nbsp;
+					</div>
+					<div class="footer"></div>
+				</div>
+			</td>
+			<td class="right">
+				<div class="Right">
+					<div class="col">
 
 
-<h1>Create New :</h1>
-<div class="indent people_on_project">
-<%= link_to Subnet, new_subnet_path%>
-</div>
+						  <h1>Create New :</h1>
+						  <div class="indent people_on_project">
+						  <%= link_to Subnet, new_subnet_path%></br>
+						<%= link_to Site, new_site_path %>
+						  </div>
 
-<div class="project_notifications">
-<h1>Report Bug or Get Help</h1>
-<div class="indent">
-<div class="digest_subscription">
+    <div class="project_notifications">
+      <h1>Report Bug or Get Help</h1>
+      <div class="indent">
+          <div class="digest_subscription">
 
-<span class="sprite email_icon" style="background: url(<%= asset_path 'basecamp_sprites.png' %>) no-repeat -190px -30px; width: 21px; padding-top: 21px; " title=""></span>
-<p><a href="mailto:jamyers@correctcaresolutions.com">Email Jason</a></p>
-</div>
-</div>
-</div>
+            <span class="sprite email_icon" style="background: url(<%= asset_path 'basecamp_sprites.png' %>) no-repeat -190px -30px; width: 21px; padding-top: 21px; " title=""></span>
+              <p><a href="mailto:jamyers@correctcaresolutions.com">Email Jason</a></p>
+          </div>
+      </div>
+    </div>
 
 
 
+                 </div>
+               </div>
+             </td>
+           </tr>
+        </table>
+    </div>
+  </div>
 </div>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-
-<%= link_to 'New Site', new_site_path %>
+</body>
+</html>

@@ -7846,7 +7846,7 @@ line-height: 1.1em
 }
 table.forum_view td.message {
 padding-right: 15px;
-width: 70%
+width: 100%
 }
 table.forum_view td.message .private_bug {
 top: -2px

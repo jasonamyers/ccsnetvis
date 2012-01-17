@@ -1,6 +1,25 @@
-<h1>Editing site</h1>
+<div id="Wrapper" style="position: relative;">
+	<div id="swap_to"></div>
+	<div id="swap_from">
+		<div id="screen_body" class="container">
+			<div id="blank_slate" class="clearfix"></div>
+			<table class="layout">
+				<tr>
+					<td class="left">
+						<div class="Left">
+							<div class="col">
+								<div class="page_header">  <div class="page_header_links">
+								    <%= link_to 'Delete this site', @site, confirm: 'Are you sure?', :class =>"admin", method: :delete %>
+								  </div>
+								  <h1>Edit this Site</h1>
+								</div>
+							<div class="innercol">
+									
 
 <%= render 'form' %>
 
 <%= link_to 'Show', @site %> |
 <%= link_to 'Back', sites_path %>
+<br>
+</div>
+</div>
