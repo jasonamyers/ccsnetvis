@@ -2,7 +2,7 @@ class SubnetsController < ApplicationController
   # GET /subnets
   # GET /subnets.json
   def index
-    @subnets = Subnet.all
+    @subnets = Subnet.all(:order => "preference")
 
     respond_to do |format|
       format.html # index.html.erb

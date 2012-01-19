@@ -10,28 +10,44 @@
       </ul>
     </div>
   <% end %>
+<table>
+
+  <table class="forum_view">
+	<tr>
 
   <div class="field">
-    <%= f.label :network %><br />
-    <%= f.text_field :network %>
+    <th><%= f.label :network %></th>
+    <td><%= f.text_field :network %></td>
   </div>
+</tr>
+<tr>
   <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
+    <th><%= f.label :description %></th>
+    <td><%= f.text_area :description, :rows=>5, :cols=>40 %></td>
   </div>
+</tr>
+<tr>	
   <div class="field">
-    <%= f.label :netmask %><br />
-    <%= f.text_field :netmask %>
+    <th><%= f.label :netmask %></th>
+    <td><%= f.text_field :netmask %></td>
   </div>
+</tr>
+<tr>
   <div class="field">
-    <%= f.label :gateway %><br />
-    <%= f.text_field :gateway %>
+    <th><%= f.label :gateway %></th>
+    <td><%= f.text_field :gateway %></td>
   </div>
+</tr>
+<tr>
   <div class="field">
-    <%= f.label :preference %><br />
-    <%= f.text_field :preference %>
+    <th><%= f.label :preference %></th>
+    <td><%= f.text_field :preference %><td>
   </div>
+</tr>
+<tr>
   <div class="actions">
-    <%= f.submit %>
+    <td><%= f.submit %></td>
   </div>
+</tr>
 <% end %>
+</table>
