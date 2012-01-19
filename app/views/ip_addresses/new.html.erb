@@ -1,5 +1,70 @@
-<h1>New ip_address</h1>
+<div id="Wrapper" style="position: relative;">
+	<div id="swap_to"></div>
+	<div id="swap_from">
+		<div id="screen_body" class="container">
+			<div id="blank_slate" class="clearfix"></div>
+			<table class="layout">
+				<tr>
+					<td class="left">
+						<div class="Left">
+							<div class="col">
+								<div class="page_header">  <div class="page_header_links">
+									<%= link_to 'Back', ip_addresses_path %>
+								  </div>
+								  <h1>New IP Address</h1>
+								</div>
+							<div class="innercol">
 
 <%= render 'form' %>
 
-<%= link_to 'Back', ip_addresses_path %>
+<br>
+</div>
+</div>
+					<div class="bottom">
+						&nbsp;
+					</div>
+					<div class="footer"></div>
+				</div>
+			</td>
+			<td class="right">
+				<div class="Right">
+					<div class="col">
+
+
+						  <h1>Create New :</h1>
+						  <div class="indent people_on_project">
+						  <%= link_to Subnet, new_subnet_path%></br>
+						<%= link_to Site, new_site_path %></br>
+						<%= link_to Contact, new_contact_path %></br>
+						  </div>
+						  <h1>Link:</h1>
+						  <div class="indent people_on_project">
+						  <%= link_to "Site to Subnet", new_site_subnet_path%></br>
+						<%= link_to "Contact to Site", new_site_contact_path %></br>
+
+						  </div>
+
+    <div class="project_notifications">
+      <h1>Report Bug or Get Help</h1>
+      <div class="indent">
+          <div class="digest_subscription">
+
+            <span class="sprite email_icon" style="background: url(<%= asset_path 'basecamp_sprites.png' %>) no-repeat -190px -30px; width: 21px; padding-top: 21px; " title=""></span>
+              <p><a href="mailto:jamyers@correctcaresolutions.com">Email Jason</a></p>
+          </div>
+      </div>
+    </div>
+
+
+
+                 </div>
+               </div>
+             </td>
+           </tr>
+        </table>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
