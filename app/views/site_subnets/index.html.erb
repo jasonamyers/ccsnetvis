@@ -1,4 +1,4 @@
-		<div id="Wrapper" style="position: relative;">
+<div id="Wrapper" style="position: relative;">
 			<div id="swap_to"></div>
 			<div id="swap_from">
 				<div id="screen_body" class="container">
@@ -44,6 +44,20 @@
 															</tr><% end %>
 														</table>
 													</td>
+													<td valign="top">
+														<table>
+															<tr>
+																<th>
+																	<% @ho_site = SiteSubnet.find(10) %><%= @ho_site.site.name%>
+																</th>
+															</tr><% @ho_site_subnets.each do |ho_subnet| %>
+															<tr>
+																<td>
+																	<%= link_to ho_subnet.subnet.network,subnet_path(ho_subnet.subnet) %>
+																</td>
+															</tr><% end %>
+														</table>
+													</td>
 												</tr>
 											</table>
 											<hr>
@@ -55,13 +69,13 @@
 													<th>
 														Subnet
 													</th>
-												</tr><% @site_subnets.each do |site_subnet| %>
+												</tr><% @remote_site_subnets.each do |remote_site_subnet| %>
 												<tr>
 													<td>
-														<%= site_subnet.site.name %>
+														<%= remote_site_subnet.site.name %>
 													</td>
 													<td>
-														<%= link_to site_subnet.subnet.network, subnet_path(site_subnet.subnet) %>
+														<%= link_to remote_site_subnet.subnet.network, subnet_path(remote_site_subnet.subnet) %>
 													</td>
 												</tr><% end %>
 											</table><br>
