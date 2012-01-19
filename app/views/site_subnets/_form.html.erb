@@ -10,14 +10,25 @@
       </ul>
     </div>
   <% end %>
+<table>
 
+  <table class="forum_view">
+	<tr>
   <div class="field">
-    <%= collection_select(:site_subnet, :site_id, Site.all(:order => 'name'), :id, :name) %>
+	<th>Site</th>
+    <td><%= collection_select(:site_subnet, :site_id, Site.all(:order => 'name'), :id, :name) %></td>
   </div>
+</tr>
+<tr>
   <div class="field">
-    <%= collection_select(:site_subnet, :subnet_id, Subnet.all(:order => 'network'), :id, :network) %>
+	<th>Subnet</th>
+    <td><%= collection_select(:site_subnet, :subnet_id, Subnet.all(:order => 'network'), :id, :network) %></td>
   </div>
+</tr>
+<tr>
   <div class="actions">
-    <%= f.submit %>
+    <td><%= f.submit %></td>
   </div>
+</tr>
 <% end %>
+</table>
