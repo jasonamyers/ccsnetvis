@@ -10,24 +10,36 @@
       </ul>
     </div>
   <% end %>
+<table>
 
+  <table class="forum_view">
+	<tr>
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+   <th><%= f.label :name %></th>
+    <td><%= f.text_field :name %></td>
   </div>
+</tr>
+<tr>
   <div class="field">
-    <%= f.label :address %><br />
-    <%= f.text_field :address %>
+    <th><%= f.label :address %></th>
+    <td><%= f.text_field :address %></td>
   </div>
+</tr>
+<tr>
   <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_field :description %>
+    <th><%= f.label :description %></th>
+    <td><%= f.text_field :description %></td>
   </div>
+</tr>
+<tr>
   <div class="field">
-    <%= f.label :priority %><br />
-    <%= f.text_field :priority %>
+    <th><%= f.label :priority %></th>
+    <td><%= f.text_field :priority %></td>
   </div>
+<tr>
+	<td>
   <div class="actions">
     <%= f.submit %>
-  </div>
+  </div></td>
 <% end %>
+</table>

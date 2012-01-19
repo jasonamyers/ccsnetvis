@@ -71,9 +71,15 @@
 
 						  <h1>Create New :</h1>
 						  <div class="indent people_on_project">
-							<%= link_to 'IP Address', new_ip_address_path %></br>
 						  <%= link_to Subnet, new_subnet_path%></br>
-						<%= link_to Site, new_site_path %>
+						<%= link_to Site, new_site_path %></br>
+						<%= link_to Contact, new_contact_path %></br>
+						  </div>
+						  <h1>Link:</h1>
+						  <div class="indent people_on_project">
+						  <%= link_to "Site to Subnet", new_site_subnet_path%></br>
+						<%= link_to "Contact to Site", new_site_contact_path %></br>
+
 						  </div>
 
     <div class="project_notifications">

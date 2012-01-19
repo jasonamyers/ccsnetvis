@@ -1,28 +1,100 @@
-<p id="notice"><%= notice %></p>
+<div id="Wrapper" style="position: relative;">
+	<div id="swap_to"></div>
+	<div id="swap_from">
+		<div id="screen_body" class="container">
+			<div id="blank_slate" class="clearfix"></div>
+			<table class="layout">
+				<tr>
+					<td class="left">
+						<div class="Left">
+							<div class="col">
+								<div class="page_header">
+									<div class="page_header_links">
+										<%= link_to 'Back', sites_path %> | 
+										<%= link_to 'Edit', edit_site_path(@site) %> | 
+										<%= link_to 'New', new_site_path %> | 
+									    <%= link_to 'Delete this site', @site, confirm: 'Are you sure?', :class =>"admin", method: :delete %>
+									  </div>
+									<h1>
+										Site Listing
+									</h1>
+									</div>
+									<div class="innercol">
 
-<p>
-  <b>Name:</b>
-  <%= @site.name %>
-</p>
+<table>
 
-<p>
-  <b>Address:</b>
-  <%= @site.address %>
-</p>
+  <table class="forum_view">
 
-<p>
-  <b>Description:</b>
-  <%= @site.description %>
-</p>
+<tr>
+  <th>Name:</th>
+  <td><%= @site.name %></td>
+</tr>
 
-<p>
-	<b>Contacts:</b>
-	<% @site.site_contacts.each do |contact| %>
+<tr>
+  <th>Address:</th>
+  <td><%= @site.address %></td>
+</tr>
+
+<tr>
+  <th>Description:</th>
+  <td><%= @site.description %></td>
+</tr>
+
+<tr>
+	<th>Contacts:</th>
+	<td><% @site.site_contacts.each do |contact| %>
 	   
 	  <% @contacts = Contact.find(contact.contact_id) %>
 	  <%= link_to @contacts.name, @contacts %><br>
-	<% end %>
+	<% end %></td>
+</tr>
+
+</table>
+
+					<div class="bottom">
+						&nbsp;
+					</div>
+					<div class="footer"></div>
+				</div>
+			</td>
+			<td class="right">
+				<div class="Right">
+					<div class="col">
 
 
-<%= link_to 'Edit', edit_site_path(@site) %> |
-<%= link_to 'Back', sites_path %> | <%= link_to 'New', new_site_path %>
+						  <h1>Create New :</h1>
+						  <div class="indent people_on_project">
+						  <%= link_to Subnet, new_subnet_path%></br>
+						<%= link_to Site, new_site_path %></br>
+						<%= link_to Contact, new_contact_path %></br>
+						  </div>
+						  <h1>Link:</h1>
+						  <div class="indent people_on_project">
+						  <%= link_to "Site to Subnet", new_site_subnet_path%></br>
+						<%= link_to "Contact to Site", new_site_contact_path %></br>
+
+						  </div>
+
+    <div class="project_notifications">
+      <h1>Report Bug or Get Help</h1>
+      <div class="indent">
+          <div class="digest_subscription">
+
+            <span class="sprite email_icon" style="background: url(<%= asset_path 'basecamp_sprites.png' %>) no-repeat -190px -30px; width: 21px; padding-top: 21px; " title=""></span>
+              <p><a href="mailto:jamyers@correctcaresolutions.com">Email Jason</a></p>
+          </div>
+      </div>
+    </div>
+
+
+
+                 </div>
+               </div>
+             </td>
+           </tr>
+        </table>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -23,8 +23,8 @@
 <tr id="<%= site.id %>">
   <td class="message">
     <div style="margin-left: 40px;">
-        <span class="title"><%= link_to site.name,edit_site_path(site) %> - <%=site.description%></span>
-      
+        <span class="title"><%= link_to site.name,site_path(site) %> - <%=site.description%></span>
+
       
       <br />
       <span class="meta">
@@ -58,9 +58,15 @@
 						  <h1>Create New :</h1>
 						  <div class="indent people_on_project">
 						  <%= link_to Subnet, new_subnet_path%></br>
-						<%= link_to Site, new_site_path %>
+						<%= link_to Site, new_site_path %></br>
+						<%= link_to Contact, new_contact_path %></br>
 						  </div>
+						  <h1>Link:</h1>
+						  <div class="indent people_on_project">
+						  <%= link_to "Site to Subnet", new_site_subnet_path%></br>
+						<%= link_to "Contact to Site", new_site_contact_path %></br>
 
+						  </div>
     <div class="project_notifications">
       <h1>Report Bug or Get Help</h1>
       <div class="indent">
